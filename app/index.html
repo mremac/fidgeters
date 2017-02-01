@@ -3,22 +3,27 @@
 <title>Fidgeters</title>
  
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
 <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous"> 
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
 <link href="https://wtlv1-d0df.restdb.io/assets/css/jquery.datetimepicker.min.css" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Questrial|Raleway" rel="stylesheet">
-    <link rel="icon" href="assets/images/fidgeterIcon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
+
+<link rel="icon" href="assets/images/fidgeterIcon.png">
+
+
+<link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 <body class="public">
 
 <main>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/swiper.jquery.js"></script>
 <script src="assets/data/data.js"></script>
 
 
@@ -26,18 +31,32 @@
     <div class="page-title text-center">
     	<div id="logo"><img src= "assets/images/fidgeterLogo.png"></div>
         <h1>FIDGETERS</h1>
+    <h2>Focus in motion</h2>
     </div>
+
+    
     
 <div id="page"> 
 
+  <div class="swiper-container-banner">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide" data-id="0"><img class="bannerImage" src=""></div>
+        <div class="swiper-slide" data-id="1"><img class="bannerImage" src=""></div>
+        <div class="swiper-slide" data-id="2"><img class="bannerImage" src=""></div>
+        <div class="swiper-slide" data-id="3"><img class="bannerImage" src=""></div>
+        <div class="swiper-slide" data-id="4"><img class="bannerImage" src=""></div>
+      </div>
+    </div>
+
 <div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="javascript:void(0)" class="closebtn">&times;</a>
   <div  class="overlay-content">
     		<div class="showcase" id="hiddenshowcase">
                     <img src="http://www.ericinbrackets.co/favicon.png"/>
                     <h3>ERROR</h3>
                     <p>Please refresh the page</p>
-                    <button class="cd-add-to-cart order-btn" data-price="25.99" type="button">ORDER</button>
+                    <button class="cd-add-to-cart order-btn" data-prod="cowbone" data-price="25.99" type="button">ORDER</button>
                 </div>
   </div>
 </div>
@@ -46,7 +65,6 @@
 	<div class="row">
 	    <div class="col-3" />
 	    <div class="col-6">
-		<h2>Focus in motion</h2>
 		<p><b>Brainstorming</b> doesn't have to be a <b>headache</b>. <b>Paying</b> attention shouldn't be <b>taxing</b>. Problem solving should be more <b>daydream</b> and less <b>nightmare</b> <br> - <b>Work should be less work and more play.</b><br>
 		   Fidgeters are objects designed to be played with in order to stimulate the creative process. Each one is inspired by a different way that people like to fidget.</p>
 	    </div>

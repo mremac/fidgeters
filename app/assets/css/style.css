@@ -40,8 +40,8 @@ a {
 }
 
 .overlay-content {
-    position: relative;
-    top: 25%;
+    position: absolute;
+    top: 5%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
@@ -138,10 +138,6 @@ a {
     background: none;
   font-weight: bold;
   animation: colors 30s infinite alternate; 	
-}
-
-#hiddenshowcase{
-  margin:2em auto 2em auto;
 }
 
 .email-drafter{
@@ -251,12 +247,11 @@ img {
 
 main {
   text-align: center;
-  padding: 2em 5%;
 }
 
 h1 {
-  font-size: 2rem;
-  padding: 3em 0 .8em;
+  font-size: 4rem;
+  padding: 0;
 }
 
 .cd-add-to-cart {
@@ -269,6 +264,22 @@ h1 {
   -webkit-transform: scale(0.9);
       -ms-transform: scale(0.9);
           transform: scale(0.9);
+}
+
+.swiper-wrapper, .swiper-slide{
+  height: auto;
+}
+
+.bannerImage{
+  width: 100vw;
+  height: auto;
+}
+
+.swiper-container-banner{
+  overflow: hidden;
+  width: 100vw;
+  height: 60vh;
+  margin: 2em 0 2em 0;
 }
 
 /* -------------------------------- 

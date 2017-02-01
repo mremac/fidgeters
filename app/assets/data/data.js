@@ -16,5 +16,12 @@ var config = {
 		"images" : ["assets/images/boxshadow.png"],
 		"copy" : "The Pennies is the fidgeter for life's warrior - The creative who is always fighting to create their best work. The person who knows that perfectionism isn't a problem; it's the only option. The simple circle and minimised friction creates a beautiful orbital motion, while the enamel coat gives just the right grip.",
 		"price" : 10
-	}]
+	}],
+	"bannerImages" : [
+	"assets/images/banner1.jpg",
+	"assets/images/banner2.jpg",
+	"assets/images/banner3.jpg",
+	"assets/images/banner4.jpg",
+	"assets/images/banner5.jpg"
+	]
 }
