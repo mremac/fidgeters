@@ -1,54 +1,109 @@
 
-
+	var currScrTch = false;
 jQuery(document).ready(function($){
-	$('.overlay').bind('click touchend', closeNav);
+	setTimeout(function(){
+		$('.loader').fadeOut( "slow" );
+	}, 2000);
+
+	$('#paypal-cowbone').hide();
+	$('#paypal-baton').hide();
+	$('#paypal-pennies').hide();
+
+	// $('.overlay').bind('click touchend', closeNav);
 	$('.closebtn').bind('click touchend', closeNav);
-	// $('#hiddenshowcase').bind('click touchend', onShowcaseClicked);
+	// $('#hiddenshowcase').bind('click touchend', openNav);
+	$('.showcase').bind('touchstart', function(){currScrTch=false;});
+	$('.showcase').on('touchmove', function(){currScrTch=true;});
 	$('.showcase').bind('click touchend', openNav);
+	$('.showcase#null, #hiddenshowcase').unbind('click touchend');
 
 	var slides = $('.swiper-container-banner .swiper-slide');
 	console.log(slides);
 	for(var i = 0; i < slides.length; i++){
-		slides[i].childNodes[0].src = config.bannerImages[i];
+		$('#slide-' + i + ' img').attr('data-src', config.bannerImages[i]);
+		// $('#slide-' + i).attr('src', 'assets/images/load-icon.png');
+		// slides.eq(i).css('background-size', 'cover');
+		// slides.eq(i).css('background-position', 'center center');
 	}
+
 	bannerSwiper = new Swiper ('.swiper-container-banner', {
     	autoplay: 5000,
     	slidesPerView: 'auto',
     	loop: true
   	});
 
+	productSwiper = new Swiper ('.swiper-container-product', {
+    	autoplay: 5000,
+    	slidesPerView: 1,
+    	// loop: true
+  	});
+
+	colourSwiper = new Swiper ('.swiper-container-colour', {
+    	// autoplay: 5000,
+    	centeredSlides: true,
+    	slidesPerView: 'auto',
+    	prevButton: $('.prev-colour'),
+    	nextButton: $('.next-colour'),
+    	pagination: $('.swiper-pagination-colour'),
+    	paginationClickable: true,
+    	paginationBulletRender: function (swiper, index, className) {
+    		var a = ['dfbcbc', 'b9dfb9', 'b9b9df'];
+      		return '<span class="' + className + '" data-col="' + a[index] + '" id="' + a[index] + '"></span>';
+  		},
+    	onSlideChangeEnd: function(swiper){
+    		swiper.onResize();
+    		// $('#select-colour').val($('.swiper-container-colour .swiper-slide[data-id="' + swiper.activeIndex + '"]').data("colour"));
+    		console.log("" + $('#hiddenshowcase').attr('data-product'));
+    		$('#select-colour-' + $('#hiddenshowcase').attr('data-product')).val($('.swiper-container-colour .swiper-slide[data-id="' + swiper.realIndex + '"]').data("colour"));
+    		$('.swiper-pagination-bullet-active').css('background', '#' + $('.swiper-pagination-bullet-active').data('col'));
+    	}
+  	});
+	colourSwiper.slideTo(0);
+   	// $('.swiper-pagination-bullet').each(function(bullet){
+   	// 	bullet.css('background', '#' + bullet.data('col'));
+   	// 	console.log(bullet.data('col'));
+   	// });
+  	
+  	// $('.prev-colour').bind('mousedown touchstart', colourSwiper.slidePrev);
+  	// $('.next-colour').bind('mousedown touchstart', colourSwiper.slideNext);
+    	$('.swiper-pagination-bullet').css('background', '#' + $('.swiper-pagination-bullet-active').data('col'));
+
+	$("#myNav").hide();
+
 	var cartWrapper = $('.cd-cart-container');
 	var productId = 0;
 	if( cartWrapper.length > 0 ) {
 		//store jQuery objects
-		var cartBody = cartWrapper.find('.body')
+		var cartBody = cartWrapper.find('.body');
 		var cartList = cartBody.find('ul').eq(0);
 		var cartTotal = cartWrapper.find('.checkout').find('span');
 		var cartTrigger = cartWrapper.children('.cd-cart-trigger');
-		var cartCount = cartTrigger.children('.count')
+		var cartCount = cartTrigger.children('.count');
 		var addToCartBtn = $('.cd-add-to-cart');
 		var undo = cartWrapper.find('.undo');
 		var undoTimeoutId;
 
 		//add product to cart
-		addToCartBtn.on('click', function(event){
+		addToCartBtn.on('click touchstart', function(event){
 			event.preventDefault();
 			addToCart($(this));
+			closeNav(event);
+			window.onscroll = null;
 		});
 
 		//open/close cart
-		cartTrigger.on('click', function(event){
+		cartTrigger.on('click touchend', function(event){
 			event.preventDefault();
 			toggleCart();
 		});
 
 		//close cart when clicking on the .cd-cart-container::before (bg layer)
-		cartWrapper.on('click', function(event){
+		cartWrapper.on('click touchend', function(event){
 			if( $(event.target).is($(this)) ) toggleCart(true);
 		});
 
 		//delete an item from the cart
-		cartList.on('click', '.delete-item', function(event){
+		cartList.on('click touchend', '.delete-item', function(event){
 			event.preventDefault();
 			removeProduct($(event.target).parents('.product'));
 		});
@@ -59,7 +114,7 @@ jQuery(document).ready(function($){
 		});
 
 		//reinsert item deleted from the cart
-		undo.on('click', 'a', function(event){
+		undo.on('click touchend', 'a', function(event){
 			clearInterval(undoTimeoutId);
 			event.preventDefault();
 			cartList.find('.deleted').addClass('undo-deleted').one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(){
@@ -209,7 +264,11 @@ jQuery(document).ready(function($){
 	var orderParams = 'null';
 
 	function draftOrder(){
-		var htmlStr = 	'<div id="page">' +
+		$('.loader').fadeIn( "slow" );
+		// $('.loader').fadeIn( "slow" ).done(function(){
+		// });
+		setTimeout(function(){
+			var htmlStr = 	'<div id="page">' +
 				'<div class="row">' +
 					'<textarea rows="1" cols="80" name="form-name" id="form-name" class="email-drafter" placeholder="Please provide your name so we know what to call you"></textarea>' +
 					'<textarea rows="1" cols="80" name="form-email" id="form-email" class="email-drafter" placeholder="Please provide your email so we know how to contact you"></textarea>' +
@@ -219,9 +278,18 @@ jQuery(document).ready(function($){
 				'<div class="row">' +
 					'<button id="mail-order-button" type="button" class="order-btn">Send Order</button>' +
 				'</div>' +
+					// '<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">' + 
+					// 	'<input type="hidden" name="cmd" value="_s-xclick">' + 
+					// 	'<input type="hidden" name="hosted_button_id" value="TRMNQLXFSKHEN">' + 
+					// 	'<input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">' + 
+					// 	'<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">' + 
+					// '</form>' + 
 				'</div>';
-		$('#page').replaceWith(htmlStr);
-		
+			$('#page').replaceWith(htmlStr);
+			$('#select-product').hide();
+			$('#select-product select').val("Baton Blue");
+			$('.loader').fadeOut( "slow" );
+		}, 2000);
 		$('#mail-order-button').click(function() {
 			if($("#form-name").val() == ""){
 				alert( "You have to enter your name or we won't know what to call you");
@@ -260,8 +328,8 @@ jQuery(document).ready(function($){
 		cartWrapper.removeClass('cart-open');
 		//reset undo
 		//clearInterval(undoTimeoutId);
-		undo.removeClass('visible');
-		cartList.find('.deleted').remove();
+		// undo.removeClass('visible');
+		// cartList.find('.deleted').remove();
 
 		setTimeout(function(){
 			cartBody.scrollTop(0);
@@ -276,27 +344,66 @@ jQuery(document).ready(function($){
 
 	
 	function openNav(e) {
-		console.log('test');
+	  if(currScrTch){
+	  currScrTch=false;
+	  return;
+	  }
+		// console.log('test');
+		disableScroll();
 		e.preventDefault();
+		colourSwiper.slideTo(0);
 		if(this.id != "hiddenshowcase" && this.id != "null"){
 			// console.log(this);
 			var fidg = config.fidgeters[parseInt(this.id)];
+
+			var slides = $('.swiper-container-product .swiper-slide');
+
+			for(var i = 0; i < slides.length; i++){
+				slides.eq(i).css('background', 'url(' + fidg.bannerimages[i] + ')');
+				slides.eq(i).css('background-size', 'cover');
+				slides.eq(i).css('background-position', 'center center');
+			}
+
+
+			$('.swiper-container-colour .swiper-slide').each( function(){
+				$(this).children('img').attr("src", fidg.images[parseInt($(this).data('id'))]);
+			});
+
 			// console.log(fidg);
-			$('#hiddenshowcase').children('img').attr("src", fidg.images[0]);
 			$('#hiddenshowcase').children('p').html(fidg.copy);
 			$('#hiddenshowcase').children('h3').html(fidg.id);
 			$('#hiddenshowcase').children('button').val(this.id);
 			$('#hiddenshowcase').children('button').data('price', fidg.price);
 			$('#hiddenshowcase').children('button').data('prod', fidg.id);
+			$('#paypal-' + fidg.id).show();
 			$("#myNav").show();
-			}
+		}
+                colourSwiper.onResize();
+                productSwiper.onResize();
+		$('#hiddenshowcase').attr('data-product', fidg.id);
+		console.log(fidg.id);
+	
 	}
 
 	function closeNav(e) {
 		e.preventDefault();
-			document.getElementById("myNav").style.display = "none";
+		$('#paypal-cowbone').hide();
+		$('#paypal-baton').hide();
+		$('#paypal-pennies').hide();
+		document.getElementById("myNav").style.display = "none";
+		enableScroll();
 	}
 
 	function onShowcaseClicked(e){
 		e.preventDefault();
+	}
+
+	function disableScroll() {
+		var y = $(window).scrollTop();
+		// window.addEventListener('DOMMouseScroll', preventDefault, false);
+		window.onscroll = function () { window.scrollTo(0, y); };
+	}
+
+	function enableScroll() {
+	    window.onscroll = null; 
 	}
