@@ -1,4 +1,3 @@
-
 	var currScrTch = false;
 jQuery(document).ready(function($){
 	setTimeout(function(){
@@ -160,7 +159,7 @@ jQuery(document).ready(function($){
 
 	function addProduct(trigger) {
 		var idParam = trigger[0].value;
-		console.log(trigger);
+		console.log(trigger.value);
 		var productSrc = config.fidgeters[idParam].images[0];
 		// console.log(productSrc);
 		productName = config.fidgeters[idParam].id;
@@ -366,7 +365,7 @@ jQuery(document).ready(function($){
 
 
 			$('.swiper-container-colour .swiper-slide').each( function(){
-				$(this).children('img').attr("src", fidg.images[parseInt($(this).data('id'))]);
+				$(this).children('img').attr("data-src", fidg.images[parseInt($(this).data('id'))]);
 			});
 
 			// console.log(fidg);
@@ -382,6 +381,13 @@ jQuery(document).ready(function($){
                 productSwiper.onResize();
 		$('#hiddenshowcase').attr('data-product', fidg.id);
 		console.log(fidg.id);
+		
+		var allimages= document.getElementsByTagName('img');
+    for (var i=0; i<allimages.length; i++) {
+        if (allimages[i].getAttribute('data-src')) {
+            allimages[i].setAttribute('src', allimages[i].getAttribute('data-src'));
+        }
+    }
 	
 	}
 
