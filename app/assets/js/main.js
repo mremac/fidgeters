@@ -55,6 +55,8 @@ jQuery(document).ready(function($){
     		console.log("" + $('#hiddenshowcase').attr('data-product'));
     		$('#select-colour-' + $('#hiddenshowcase').attr('data-product')).val($('.swiper-container-colour .swiper-slide[data-id="' + swiper.realIndex + '"]').data("colour"));
     		$('.swiper-pagination-bullet-active').css('background', '#' + $('.swiper-pagination-bullet-active').data('col'));
+    		$('#hiddenshowcase').attr('data-product', $('#hiddenshowcase h3').html() + $('.swiper-container-colour .swiper-slide[data-id="' + swiper.realIndex + '"]').data("colour"));
+    		$('#hiddenshowcase .cd-add-to-cart').attr('data-id', $('#hiddenshowcase h3').html() + $('.swiper-container-colour .swiper-slide[data-id="' + swiper.realIndex + '"]').data("colour"));
     	}
   	});
 	colourSwiper.slideTo(0);
@@ -152,17 +154,25 @@ jQuery(document).ready(function($){
 		//update number of items 
 		updateCartCount(cartIsEmpty);
 		//update total price
-		updateCartTotal(trigger.data('price'), true);
+		updateCartTotal(parseFloat(trigger.data('price')), true);
 		//show cart
 		cartWrapper.removeClass('empty');
 	}
 
 	function addProduct(trigger) {
-		var idParam = trigger[0].value;
-		console.log(trigger.value);
-		var productSrc = config.fidgeters[idParam].images[0];
+		var idParam = "";
+		var numParam = 0;
+		for (var i = 0; i < config.fidgeters.length; i++){
+		  // look for the entry with a matching `code` value
+		  if (config.fidgeters[i].id == trigger.data('id')){
+		    idParam = trigger.data('id');
+		    numParam = i;
+		  }
+		}
+		console.log(idParam);
+		var productSrc = config.fidgeters[numParam].images[0];
 		// console.log(productSrc);
-		productName = config.fidgeters[idParam].id;
+		productName = idParam;
 		// console.log(productName);
 		//this is just a product placeholder
 		//you should insert an item with the selected product info
@@ -369,17 +379,19 @@ jQuery(document).ready(function($){
 			});
 
 			// console.log(fidg);
-			$('#hiddenshowcase').children('p').html(fidg.copy);
+			$('#hiddenshowcase').children('p.desc').html(fidg.copy);
+			$('#hiddenshowcase').children('p.info').html(" The " + fidg.id + " is available in 3 colours. Select your colour and shipping region to proceed. Cost: £7.50 + postage");
 			$('#hiddenshowcase').children('h3').html(fidg.id);
 			$('#hiddenshowcase').children('button').val(this.id);
 			$('#hiddenshowcase').children('button').data('price', fidg.price);
 			$('#hiddenshowcase').children('button').data('prod', fidg.id);
+			$('#hiddenshowcase .cd-add-to-cart').attr('data-id', fidg.id);
 			$('#paypal-' + fidg.id).show();
 			$("#myNav").show();
 		}
                 colourSwiper.onResize();
                 productSwiper.onResize();
-		$('#hiddenshowcase').attr('data-product', fidg.id);
+		$('#hiddenshowcase').attr('data-product', fidg.id + "Red");
 		console.log(fidg.id);
 		
 		var allimages= document.getElementsByTagName('img');

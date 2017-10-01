@@ -13,7 +13,7 @@ var config = {
 			"assets/images/fidgeter-cowbone-green.jpg",
 			"assets/images/fidgeter-cowbone-blue.jpg"
 		 ],
-		"copy" : "The Cowbone is the fidgeter for the fast paced mind that refuses to slow down - the unexpected, innovative creative. The unique shape of this fidgeter is perfectly imperfect - comforting grooves complemented by a satisfying weight.<br>The Cowbone is available in 3 colours, as shown above. Select your colour and shipping region to proceed. All fidgeters cost &#163;7.50 plus postage.",
+		"copy" : "The cowbone fits snugly in the hand and demands to played with.<br> Perfectly imperfect - the unique shape and satisfying weight are curiously comforting.",
 		"price" : 10
 	},
 	{
@@ -47,7 +47,24 @@ var config = {
 			"assets/images/fidgeter-pennies-green.png",
 			"assets/images/fidgeter-pennies-blue.png",
 			],
-		"copy" : "The Pennies is the fidgeter for life's warrior - The creative who is always fighting to create their best work. The person who knows that perfectionism isn't a problem; it's the only option. The simple circle and minimised friction creates a beautiful orbital motion, while the enamel coat gives just the right grip.<br>The Pennies is available in 3 colours, as shown above. Select your colour and shipping region to proceed. All fidgeters cost &#163;7.50 plus postage.",
+		"copy" : "Roll the bright enamel coated ring around our cream pennies. Small enough to fit in any pocket, you won't want to put the pennies down.",
+		"price" : 10
+	},
+	{
+		"id" : "cork",
+		"bannerimages" : [
+			"assets/images/cork-banner/1.jpg",
+			"assets/images/cork-banner/2.jpg",
+			"assets/images/cork-banner/3.jpg",
+			"assets/images/cork-banner/4.jpg",
+			"assets/images/cork-banner/5.jpg"
+		],
+		"images" : [
+			"assets/images/fidgeter-cork-red.png",
+			"assets/images/fidgeter-cork-green.png",
+			"assets/images/fidgeter-cork-blue.png",
+			],
+		"copy" : "Have some twisted fun with the cork. This two part fidgeter fits in the palm of your hand, and the perpendicular forces of friction as it turns creates a feeling unlike any other.",
 		"price" : 10
 	}],
 	"bannerImages" : [
