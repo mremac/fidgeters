@@ -386,6 +386,37 @@ jQuery(document).ready(function($){
 			$('#hiddenshowcase').children('button').data('price', fidg.price);
 			$('#hiddenshowcase').children('button').data('prod', fidg.id);
 			$('#hiddenshowcase .cd-add-to-cart').attr('data-id', fidg.id);
+			var addToCartBtn = $('.cd-add-to-cart');
+			addToCartBtn.off('click touchstart');
+			switch (fidg.status) {
+				case 0:
+					addToCartBtn.on('click touchstart', function(event){
+						event.preventDefault();
+						addToCart($(this));
+						closeNav(event);
+						window.onscroll = null;
+					});
+					addToCartBtn.html('add to cart');
+					$('.paypal-btn').disabled = false;
+				break;
+				case 1:
+					addToCartBtn.on('click touchstart', function(event){
+						console.log('disabled - coming soon');
+					});
+					addToCartBtn.html('disabled - coming soon');
+					$('.paypal-btn').disabled = true;
+				break;
+				case 2:
+					addToCartBtn.on('click touchstart', function(event){
+						console.log('disabled - out of stock');
+					});
+					addToCartBtn.html('disabled - out of stock');
+					$('.paypal-btn').disabled = true;
+				break;
+				default:
+				break;
+			}
+		
 			$('#paypal-' + fidg.id).show();
 			$("#myNav").show();
 		}

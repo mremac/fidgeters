@@ -14,7 +14,8 @@ var config = {
 			"assets/images/fidgeter-cowbone-blue.jpg"
 		 ],
 		"copy" : "The cowbone fits snugly in the hand and demands to played with.<br> Perfectly imperfect - the unique shape and satisfying weight are curiously comforting.",
-		"price" : 10
+		"price" : 10,
+		"status" : 0
 	},
 	{
 		"id" : "baton",
@@ -31,7 +32,8 @@ var config = {
 			"assets/images/boxshadow.png",
 			],
 		"copy" : "The Baton is perfect for the logical creative - an inquisitive, curious daydreamer that is always trying to explore more. A student of the whole world. The weighted bulbs on either end of the bar create a satisfying balance, either static or in motion.<br>The Baton is available in 3 colours, as shown above. Select your colour and shipping region to proceed. All fidgeters cost &#163;7.50 plus postage.",
-		"price" : 10 
+		"price" : 10,
+		"status" : 2
 	},
 	{
 		"id" : "pennies",
@@ -48,7 +50,8 @@ var config = {
 			"assets/images/fidgeter-pennies-blue.png",
 			],
 		"copy" : "Roll the bright enamel coated ring around our cream pennies. Small enough to fit in any pocket, you won't want to put the pennies down.",
-		"price" : 10
+		"price" : 10,
+		"status" : 2
 	},
 	{
 		"id" : "cork",
@@ -65,7 +68,8 @@ var config = {
 			"assets/images/fidgeter-cork-blue.png",
 			],
 		"copy" : "Have some twisted fun with the cork. This two part fidgeter fits in the palm of your hand, and the perpendicular forces of friction as it turns creates a feeling unlike any other.",
-		"price" : 10
+		"price" : 10,
+		"status" : 1
 	}],
 	"bannerImages" : [
 	"assets/images/banner1.jpg",
