@@ -397,22 +397,28 @@ jQuery(document).ready(function($){
 						window.onscroll = null;
 					});
 					addToCartBtn.html('add to cart');
-					$('.paypal-btn').disabled = false;
+					$('.paypal-btn').removeAttr('disabled');
+					$('.paypal-btn').attr('src', 'assets/images/PAY%20NOW.png');
 				break;
+
 				case 1:
 					addToCartBtn.on('click touchstart', function(event){
 						console.log('disabled - coming soon');
 					});
 					addToCartBtn.html('disabled - coming soon');
-					$('.paypal-btn').disabled = true;
+					$('.paypal-btn').attr('disabled', 'disabled');
+					$('.paypal-btn').attr('src', 'assets/images/DISABLED.png');
 				break;
+
 				case 2:
 					addToCartBtn.on('click touchstart', function(event){
 						console.log('disabled - out of stock');
 					});
 					addToCartBtn.html('disabled - out of stock');
-					$('.paypal-btn').disabled = true;
+					$('.paypal-btn').attr('disabled', 'disabled');
+					$('.paypal-btn').attr('src', 'assets/images/DISABLED.png');
 				break;
+
 				default:
 				break;
 			}
