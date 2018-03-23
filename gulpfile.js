@@ -7,8 +7,8 @@ imagemin = require('gulp-imagemin'),
     del = require('del'), //plugins that doesnt start with 'gulp-'' needs to be defined here
     sequal = require('run-sequence'), //this plugin will help with asynchronous issue
     arg = require('yargs').argv, //pass arguments in/from terminal
-    map = require('map-stream');//Create a through stream from an asyncronous function.
-    //pagespeed = require('psi'); //pagespeed API
+    map = require('map-stream'),//Create a through stream from an asyncronous function.
+    webserver = require('gulp-webserver'); //it's the webserver
 
 var declare = require('gulp-declare');
 var concat = require('gulp-concat');
@@ -365,7 +365,7 @@ gulp.task('clean', function(cb) {
 /* Webserver with livereload facility */
 gulp.task('webserver', function() {
   gulp.src('app')
-    .pipe(req.webserver({
+    .pipe(webserver({
       livereload: true,
       directoryListing: false,
       open: true
