@@ -1,4 +1,5 @@
-	var currScrTch = false;
+
+var currScrTch = false;
 jQuery(document).ready(function($){
 	setTimeout(function(){
 		$('.loader').fadeOut( "slow" );
@@ -380,7 +381,7 @@ jQuery(document).ready(function($){
 
 			// console.log(fidg);
 			$('#hiddenshowcase').children('p.desc').html(fidg.copy);
-			$('#hiddenshowcase').children('p.info').html(" The " + fidg.id + " is available in 3 colours. Select your colour and shipping region to proceed. Cost: £7.50 + postage");
+			$('#hiddenshowcase').children('p.info').html(" The " + fidg.id + " is available in 3 colours. Select your colour and shipping region to proceed. Cost: £10 + postage <br><br> Shipping estimates:<br> 4 working days inside the UK<br> Up to 15 working days outside UK<br> Up to 30 days for AUS/NZ");
 			$('#hiddenshowcase').children('h3').html(fidg.id);
 			$('#hiddenshowcase').children('button').val(this.id);
 			$('#hiddenshowcase').children('button').data('price', fidg.price);
