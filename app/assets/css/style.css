@@ -18,8 +18,8 @@ a {
 }
 
 .blurb {
-  max-width: 70vw;
-  margin: 0 15vw 0 15vw;
+  max-width: 90vw;
+  margin: 0 5vw 0 5vw;
 }
 
 .loader {
@@ -224,10 +224,10 @@ a {
   border-radius: 50%;
   -webkit-animation: colors 30s infinite alternate;
           animation: colors 30s infinite alternate;
-  min-width: 2em;
+  min-width: 6em;
   max-width: 8em;
   width: 12%;
-  min-height: 2em;
+  min-height: 6em;
   max-height: 8em;
   height: auto;
   margin: 1em auto 1em auto;
@@ -569,7 +569,7 @@ h2{
 
 .swiper-container-banner .swiper-slide {
     margin: 0vh 0 0 0;
-    height: 60vh;
+    /*height: 60vh;*/
 }
 
 #dfbcbc{
