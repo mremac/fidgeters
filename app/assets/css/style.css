@@ -224,11 +224,11 @@ a {
   border-radius: 50%;
   -webkit-animation: colors 30s infinite alternate;
           animation: colors 30s infinite alternate;
-  min-width: 8em;
-  max-width: 15em;
+  min-width: 2em;
+  max-width: 8em;
   width: 12%;
-  min-height: 8em;
-  max-height: 15em;
+  min-height: 2em;
+  max-height: 8em;
   height: auto;
   margin: 1em auto 1em auto;
 }
