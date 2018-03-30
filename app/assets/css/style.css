@@ -37,11 +37,19 @@ a {
   position: fixed;
   top: -webkit-calc(50vh - 2.5vw);
   top: calc(50vh - 2vw - 50px);
-  left: 46vw;
-  width: calc(100px + 4vw);
-  height: calc(100px + 4vw);
+  left: 45vw;
+  width: 10vw;
+  height: 10vw;
   -webkit-animation: loading-spinner 3s infinite alternate;
-          animation: loading-spinner 3s infinite alternate;
+        animation: loading-spinner 3s infinite alternate;
+}
+
+@media only screen and (max-width: 600px) {
+  .loader .loading-icon {
+    left: 37.5vw;
+    width: 25vw;
+    height: 25vw;
+  }
 }
 
 .swiper-container-colour{
