@@ -9,9 +9,9 @@ var config = {
 			"assets/images/cowbone-banner/6.jpg"
 		],
 		"images" : [
-			"assets/images/fidgeter-cowbone-red.jpg",
-			"assets/images/fidgeter-cowbone-green.jpg",
-			"assets/images/fidgeter-cowbone-blue.jpg"
+			"assets/images/fidgeter-cowbone-red.png",
+			"assets/images/fidgeter-cowbone-green.png",
+			"assets/images/fidgeter-cowbone-blue.png"
 		 ],
 		"copy" : "The cowbone fits snugly in the hand and demands to played with.<br> Perfectly imperfect - the unique shape and satisfying weight are curiously comforting.",
 		"price" : 10,
