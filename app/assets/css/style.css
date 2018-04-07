@@ -1367,7 +1367,7 @@ Main Components
 }
 
 .gif-block .col-xs-6.col-sm-4{
-  padding: 0;
+  padding: 10;
   overflow:hidden;
 }
 .gif-block img{
