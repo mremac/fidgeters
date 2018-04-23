@@ -94,6 +94,10 @@ a {
   margin: 2em auto 2em auto;
 }
 
+.button-bar {
+  margin: -4em 0.5em;
+}
+
 .footer-box {
   width: 100%;
   border-top: 0.35em solid slategrey;
