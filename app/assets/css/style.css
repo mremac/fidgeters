@@ -206,10 +206,33 @@ a {
   overflow-y: scroll;
   overflow-x: hidden;
   height: 80vh;
-  min-width: 90vw;
+  max-width: 60vw;
   margin-top: 13vh;
   font-size: 10pt;
 }
+
+@media only screen and (max-width: 850px){
+  #hiddenshowcase {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 80vh;
+  max-width: 70vw;
+  margin-top: 13vh;
+  font-size: 10pt;
+}
+}
+
+@media only screen and (max-width: 650px){
+  #hiddenshowcase {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 90vh;
+  max-width: 70vw;
+  margin-top: 13vh;
+  font-size: 10pt;
+}
+}
+
 #hiddenshowcase .desc, #hiddenshowcase .info{
   font-size: 1.2em;
 }
