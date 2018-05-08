@@ -108,10 +108,15 @@ a {
 
 .about-product {
   position:relative;
-  margin-top: 2em;
-  margin-left: 5vw;
-  margin-right: 10vw;
+  padding-top: 2em;
+  padding-left: 5vw;
+  padding-right: 10vw;
   text-align: left;
+}
+
+.about-img {
+  position:relative;
+  padding-top: 2em;
 }
 
 .about-end {
