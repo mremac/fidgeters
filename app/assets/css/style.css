@@ -355,7 +355,7 @@ a {
   overflow-y: scroll;
   overflow-x: hidden;
   height: 80vh;
-  min-width: 90vw;
+  max-width: 60em;
   margin-top: 13vh;
   font-size: 10pt;
 }
@@ -459,105 +459,105 @@ a {
 
 @-webkit-keyframes colors {
   0% {
-    color: #b9b9df;
-    border-color: #b9b9df;
+    color: #9999bf;
+    border-color: #9999bf;
   }
   50% {
-    color: #b9dfb9;
-    border-color: #b9dfb9;
+    color: #99bf99;
+    border-color: #99bf99;
   }
   100% {
-    color: #dfbcbc;
-    border-color: #dfbcbc;
+    color: #bf9c9c;
+    border-color: #bf9c9c;
   }
 }
 
 @keyframes colors {
   0% {
-    color: #b9b9df;
-    border-color: #b9b9df;
+    color: #a9a9cf;
+    border-color: #a9a9cf;
   }
   50% {
-    color: #b9dfb9;
-    border-color: #b9dfb9;
+    color: #a9cfa9;
+    border-color: #a9cfa9;
   }
   100% {
-    color: #dfbcbc;
-    border-color: #dfbcbc;
+    color: #cfacac;
+    border-color: #cfacac;
   }
 }
 @-webkit-keyframes backcolor {
   0% {
-    color: #b9b9df;
-    background-color: #b9b9df;
+    color: #a9a9cf;
+    background-color: #a9a9cf;
   }
   50% {
-    color: #b9dfb9;
-    background-color: #b9dfb9;
+    color: #a9cfa9;
+    background-color: #a9cfa9;
   }
   100% {
-    color: #dfbcbc;
-    background-color: #dfbcbc;
+    color: #cfacac;
+    background-color: #cfacac;
   }
 }
 @keyframes backcolor {
   0% {
-    color: #b9b9df;
-    background-color: #b9b9df;
+    color: #a9a9cf;
+    background-color: #a9a9cf;
   }
   50% {
-    color: #b9dfb9;
-    background-color: #b9dfb9;
+    color: #a9cfa9;
+    background-color: #a9cfa9;
   }
   100% {
-    color: #dfbcbc;
-    background-color: #dfbcbc;
+    color: #cfacac;
+    background-color: #cfacac;
   }
 }
 @-webkit-keyframes backcolor-ripple {
   0% {
     color: white;
-    background-color: #b9b9df;
+    background-color: #a9a9cf;
   }
   50% {
     color: white;
-    background-color: #b9dfb9;
+    background-color: #a9cfa9;
   }
   100% {
     color: white;
-    background-color: #dfbcbc;
+    background-color: #cfacac;
   }
 }
 @keyframes backcolor-ripple {
   0% {
     color: white;
-    background-color: #b9b9df;
+    background-color: #a9a9cf;
   }
   50% {
     color: white;
-    background-color: #b9dfb9;
+    background-color: #a9cfa9;
   }
   100% {
     color: white;
-    background-color: #dfbcbc;
+    background-color: #cfacac;
   }
 }
 @-webkit-keyframes color-ripple {
   0% {
-    color: #b9b9df;
-    border-color: #b9b9df;
+    color: #a9a9cf;
+    border-color: #a9a9cf;
   }
   25% {
-    color: #d2bcbc;
-    border-color: #d2bcbc;
+    color: #c2acac;
+    border-color: #c2acac;
   }
   50% {
-    color: #b9dfb9;
-    border-color: #b9dfb9;
+    color: #a9cfa9;
+    border-color: #a9cfa9;
   }
   75% {
-    color: #b9b9d2;
-    border-color: #b9b9d2;
+    color: #a9a9c2;
+    border-color: #a9a9c2;
   }
   100% {
     color: #fff;
@@ -566,20 +566,20 @@ a {
 }
 @keyframes color-ripple {
   0% {
-    color: #b9b9df;
-    border-color: #b9b9df;
+    color: #a9a9cf;
+    border-color: #a9a9cf;
   }
   25% {
-    color: #d2bcbc;
-    border-color: #d2bcbc;
+    color: #c2acac;
+    border-color: #c2acac;
   }
   50% {
-    color: #b9dfb9;
-    border-color: #b9dfb9;
+    color: #a9cfa9;
+    border-color: #a9cfa9;
   }
   75% {
-    color: #b9b9d2;
-    border-color: #b9b9d2;
+    color: #a9a9c2;
+    border-color: #a9a9c2;
   }
   100% {
     color: #fff;
@@ -588,46 +588,46 @@ a {
 }
 @-webkit-keyframes color-ripple-bright {
   0% {
-    color: #b9b9df;
-    border-color: #b9b9df;
+    color: #a9a9cf;
+    border-color: #a9a9cf;
   }
   25% {
-    color: #d2bcbc;
-    border-color: #d2bcbc;
+    color: #c2acac;
+    border-color: #c2acac;
   }
   50% {
-    color: #b9dfb9;
-    border-color: #b9dfb9;
+    color: #a9cfa9;
+    border-color: #a9cfa9;
   }
   75% {
-    color: #b9b9d2;
-    border-color: #b9b9d2;
+    color: #a9a9c2;
+    border-color: #a9a9c2;
   }
   100% {
-    color: #dfbcbc;
-    border-color: #dfbcbc;
+    color: #cfacac;
+    border-color: #cfcccc;
   }
 }
 @keyframes color-ripple-bright {
   0% {
-    color: #b9b9df;
-    border-color: #b9b9df;
+    color: #a9a9cf;
+    border-color: #a9a9cf;
   }
   25% {
-    color: #d2bcbc;
-    border-color: #d2bcbc;
+    color: #c2acac;
+    border-color: #c2acac;
   }
   50% {
-    color: #b9dfb9;
-    border-color: #b9dfb9;
+    color: #a9cfc9;
+    border-color: #a9cfa9;
   }
   75% {
-    color: #b9b9d2;
-    border-color: #b9b9d2;
+    color: #a9a9c2;
+    border-color: #a9a9c2;
   }
   100% {
-    color: #dfbcbc;
-    border-color: #dfbcbc;
+    color: #cfacac;
+    border-color: #cfacac;
   }
 }
 @-webkit-keyframes loading-spinner {

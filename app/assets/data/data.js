@@ -69,7 +69,7 @@ var config = {
 			],
 		"copy" : "Have some twisted fun with the cork. This two part fidgeter fits in the palm of your hand, and the perpendicular forces of friction as it turns creates a feeling unlike any other.",
 		"price" : 10,
-		"status" : 1
+		"status" : 0
 	}],
 	"bannerImages" : [
 	"assets/images/banner1.jpg",
