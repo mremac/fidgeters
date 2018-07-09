@@ -1,6 +1,6 @@
 var config = {
 	"fidgeters" : [{
-		"id" : "cowbone",
+		"id" : "Cowbone",
 		"bannerimages" : [
 			"assets/images/cowbone-banner/48.jpg",
 			"assets/images/cowbone-banner/13.jpg",
@@ -13,7 +13,7 @@ var config = {
 			"assets/images/fidgeter-cowbone-green.png",
 			"assets/images/fidgeter-cowbone-blue.png"
 		 ],
-		"copy" : "The cowbone fits snugly in the hand and demands to played with.<br> Perfectly imperfect - the unique shape and satisfying weight are curiously comforting.",
+		"copy" : "The cowbone fits snugly in the hand and demands to played with.<br> Perfectly imperfect, the unique shape and satisfying weight are curiously comforting.",
 		"price" : 10,
 		"status" : 0
 	},
@@ -54,7 +54,7 @@ var config = {
 		"status" : 2
 	},
 	{
-		"id" : "cork",
+		"id" : "Cork",
 		"bannerimages" : [
 			"assets/images/cork-banner/1.jpg",
 			"assets/images/cork-banner/2.jpg",
