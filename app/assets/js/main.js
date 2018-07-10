@@ -5,7 +5,8 @@ jQuery(document).ready(function($){
 		$('.loader').fadeOut( "slow" );
 	}, 2000);
 
-	$('#paypal-cowbone').hide();
+	$('#paypal-Cowbone').hide();
+	$('#paypal-Cork').hide();
 	$('#paypal-baton').hide();
 	$('#paypal-pennies').hide();
 
@@ -56,8 +57,8 @@ jQuery(document).ready(function($){
     		console.log("" + $('#hiddenshowcase').attr('data-product'));
     		$('#select-colour-' + $('#hiddenshowcase').attr('data-product')).val($('.swiper-container-colour .swiper-slide[data-id="' + swiper.realIndex + '"]').data("colour"));
     		$('.swiper-pagination-bullet-active').css('background', '#' + $('.swiper-pagination-bullet-active').data('col'));
-    		$('#hiddenshowcase').attr('data-product', $('#hiddenshowcase h3').html() + $('.swiper-container-colour .swiper-slide[data-id="' + swiper.realIndex + '"]').data("colour"));
-    		$('#hiddenshowcase .cd-add-to-cart').attr('data-id', $('#hiddenshowcase h3').html() + $('.swiper-container-colour .swiper-slide[data-id="' + swiper.realIndex + '"]').data("colour"));
+    		// $('#hiddenshowcase').attr('data-product', $('#hiddenshowcase h3').html() + $('.swiper-container-colour .swiper-slide[data-id="' + swiper.realIndex + '"]').data("colour"));
+    		// $('#hiddenshowcase .cd-add-to-cart').attr('data-id', $('#hiddenshowcase h3').html() + $('.swiper-container-colour .swiper-slide[data-id="' + swiper.realIndex + '"]').data("colour"));
     	}
   	});
 	colourSwiper.slideTo(0);
@@ -429,7 +430,7 @@ jQuery(document).ready(function($){
 		}
                 colourSwiper.onResize();
                 productSwiper.onResize();
-		$('#hiddenshowcase').attr('data-product', fidg.id + "Red");
+		$('#hiddenshowcase').attr('data-product', fidg.id);
 		console.log(fidg.id);
 		
 		var allimages= document.getElementsByTagName('img');
@@ -443,7 +444,8 @@ jQuery(document).ready(function($){
 
 	function closeNav(e) {
 		e.preventDefault();
-		$('#paypal-cowbone').hide();
+		$('#paypal-Cowbone').hide();
+		$('#paypal-Cork').hide();
 		$('#paypal-baton').hide();
 		$('#paypal-pennies').hide();
 		document.getElementById("myNav").style.display = "none";

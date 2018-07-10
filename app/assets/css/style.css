@@ -359,8 +359,19 @@ a {
   margin-top: 13vh;
   font-size: 10pt;
 }
+
 #hiddenshowcase .desc, #hiddenshowcase .info{
   font-size: 1.2em;
+  margin-left: 4em;
+  margin-right: 4em;
+}
+
+@media only screen and (max-width: 900px){
+  #hiddenshowcase .desc, #hiddenshowcase .info{
+  font-size: 1.2em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
 }
 
 @media only screen and (max-width:500px){
@@ -722,6 +733,7 @@ h2{
 
 .swiper-container-product {
   width: 95vw;
+  max-width: 70em;
   margin: -10vh 3.5vw 0 -5vw;
   overflow: hidden;
 }

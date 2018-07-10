@@ -2,18 +2,18 @@ var config = {
 	"fidgeters" : [{
 		"id" : "Cowbone",
 		"bannerimages" : [
-			"assets/images/cowbone-banner/48.jpg",
-			"assets/images/cowbone-banner/13.jpg",
-			"assets/images/cowbone-banner/34.jpg",
-			"assets/images/cowbone-banner/35.jpg",
-			"assets/images/cowbone-banner/6.jpg"
+			"assets/images/cowbone-banner/1.jpg",
+			"assets/images/cowbone-banner/2.jpg",
+			"assets/images/cowbone-banner/3.jpg",
+			"assets/images/cowbone-banner/4.jpg",
+			"assets/images/cowbone-banner/5.jpg"
 		],
 		"images" : [
 			"assets/images/fidgeter-cowbone-red.png",
 			"assets/images/fidgeter-cowbone-green.png",
 			"assets/images/fidgeter-cowbone-blue.png"
 		 ],
-		"copy" : "The cowbone fits snugly in the hand and demands to played with.<br> Perfectly imperfect, the unique shape and satisfying weight are curiously comforting.",
+		"copy" : "The Cowbone fits snugly in the hand and demands to played with.<br> Perfectly imperfect, the unique shape and satisfying weight are curiously comforting.",
 		"price" : 10,
 		"status" : 0
 	},
@@ -67,7 +67,7 @@ var config = {
 			"assets/images/fidgeter-cork-green.png",
 			"assets/images/fidgeter-cork-blue.png",
 			],
-		"copy" : "Have some twisted fun with the cork. This two part fidgeter fits in the palm of your hand, and the perpendicular forces of friction as it turns creates a feeling unlike any other.",
+		"copy" : "This two-part fidgeter fits in the palm of your hand, and the perpendicular forces of friction as it turns creates a feeling unlike any other.",
 		"price" : 10,
 		"status" : 0
 	}],
