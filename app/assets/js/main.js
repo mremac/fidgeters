@@ -39,6 +39,8 @@ jQuery(document).ready(function($){
     	// loop: true
   	});
 
+
+
 	colourSwiper = new Swiper ('.swiper-container-colour', {
     	// autoplay: 5000,
     	centeredSlides: true,
@@ -56,6 +58,7 @@ jQuery(document).ready(function($){
     		// $('#select-colour').val($('.swiper-container-colour .swiper-slide[data-id="' + swiper.activeIndex + '"]').data("colour"));
     		console.log("" + $('#hiddenshowcase').attr('data-product'));
     		$('#select-colour-' + $('#hiddenshowcase').attr('data-product')).val($('.swiper-container-colour .swiper-slide[data-id="' + swiper.realIndex + '"]').data("colour"));
+    		console.log($('.swiper-container-colour .swiper-slide[data-id="' + swiper.realIndex + '"]').data("colour"));
     		$('.swiper-pagination-bullet-active').css('background', '#' + $('.swiper-pagination-bullet-active').data('col'));
     		// $('#hiddenshowcase').attr('data-product', $('#hiddenshowcase h3').html() + $('.swiper-container-colour .swiper-slide[data-id="' + swiper.realIndex + '"]').data("colour"));
     		// $('#hiddenshowcase .cd-add-to-cart').attr('data-id', $('#hiddenshowcase h3').html() + $('.swiper-container-colour .swiper-slide[data-id="' + swiper.realIndex + '"]').data("colour"));
@@ -363,7 +366,9 @@ jQuery(document).ready(function($){
 		disableScroll();
 		e.preventDefault();
 		colourSwiper.slideTo(0);
+
 		if(this.id != "hiddenshowcase" && this.id != "null"){
+    		$('#select-colour-' + $('#hiddenshowcase').attr('data-product')).val("Red");
 			// console.log(this);
 			var fidg = config.fidgeters[parseInt(this.id)];
 
