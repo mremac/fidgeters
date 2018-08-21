@@ -387,7 +387,7 @@ jQuery(document).ready(function($){
 
 			// console.log(fidg);
 			$('#hiddenshowcase').children('p.desc').html(fidg.copy);
-			$('#hiddenshowcase').children('p.info').html(" The " + fidg.id + " is available in 3 colours. Select your colour and shipping region to proceed.<br><br> Shipping estimates:<br> 4 working days inside the UK<br> Up to 15 working days outside UK<br> Up to 30 days for AUS/NZ");
+			$('#hiddenshowcase').children('p.info').html(" The " + fidg.id + " is available in 3 colours. Select your colour (above) and shipping region (below) to proceed.<br><br> Shipping estimates:<br> 4 working days inside the UK<br> Up to 15 working days outside UK<br> Up to 30 days for AUS/NZ");
 			$('#hiddenshowcase').children('h3').html(fidg.id);
 			$('#hiddenshowcase').children('button').val(this.id);
 			$('#hiddenshowcase').children('button').data('price', fidg.price);
@@ -395,6 +395,7 @@ jQuery(document).ready(function($){
 			$('#hiddenshowcase .cd-add-to-cart').attr('data-id', fidg.id);
 			var addToCartBtn = $('.cd-add-to-cart');
 			addToCartBtn.off('click touchstart');
+			$('#low-stock-info-block').hide();
 			switch (fidg.status) {
 				case 0:
 					addToCartBtn.on('click touchstart', function(event){
@@ -424,6 +425,16 @@ jQuery(document).ready(function($){
 					addToCartBtn.html('disabled - out of stock');
 					$('.paypal-btn').attr('disabled', 'disabled');
 					$('.paypal-btn').attr('src', 'assets/images/DISABLED.png');
+				break;
+
+				case 3:
+					$('#low-stock-info-block').show();
+					addToCartBtn.on('click touchstart', function(event){
+						console.log('low stock');
+					});
+					addToCartBtn.html('low stock');
+					$('.paypal-btn').removeAttr('disabled');
+					$('.paypal-btn').attr('src', 'assets/images/PAY%20NOW.png');
 				break;
 
 				default:

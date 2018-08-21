@@ -15,7 +15,7 @@ var config = {
 		 ],
 		"copy" : "The Cowbone fits snugly in the hand and demands to played with.<br> Perfectly imperfect, the unique shape and satisfying weight are curiously comforting.",
 		"price" : 10,
-		"status" : 0
+		"status" : 3
 	},
 	{
 		"id" : "baton",
@@ -31,7 +31,7 @@ var config = {
 			"assets/images/boxshadow.png",
 			"assets/images/boxshadow.png",
 			],
-		"copy" : "The Baton is perfect for the logical creative - an inquisitive, curious daydreamer that is always trying to explore more. A student of the whole world. The weighted bulbs on either end of the bar create a satisfying balance, either static or in motion.<br>The Baton is available in 3 colours, as shown above. Select your colour and shipping region to proceed. All fidgeters cost &#163;7.50 plus postage.",
+		"copy" : "The Baton is perfect for the logical creative - an inquisitive, curious daydreamer that is always trying to explore more. A student of the whole world. The weighted bulbs on either end of the bar create a satisfying balance, either static or in motion.<br>The Baton is available in 3 colours, as shown above. Select your colour (above) and shipping region (below) to proceed. All fidgeters cost &#163;7.50 plus postage.",
 		"price" : 10,
 		"status" : 2
 	},
@@ -69,7 +69,7 @@ var config = {
 			],
 		"copy" : "This two-part fidgeter fits in the palm of your hand, and the perpendicular forces of friction as it turns creates a feeling unlike any other.",
 		"price" : 10,
-		"status" : 0
+		"status" : 3
 	}],
 	"bannerImages" : [
 	"assets/images/banner1.jpg",
